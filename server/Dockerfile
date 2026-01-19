@@ -36,6 +36,7 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/dist/config ./config
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/dist/src ./src
+COPY --from=builder /app/dist/scripts ./scripts
 
 # Create directories for data persistence
 RUN mkdir -p .tmp public/uploads
