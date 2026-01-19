@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   ClipboardList,
   Plus,
-  Eye,
   Link2,
   Play,
   Pause,
@@ -107,7 +106,7 @@ export default function SurveySection({
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'draft':
-        return <Badge variant="secondary">{t('survey.statusDraft', 'Черновик')}</Badge>;
+        return <Badge variant="default">{t('survey.statusDraft', 'Черновик')}</Badge>;
       case 'active':
         return <Badge variant="success">{t('survey.statusActive', 'Активна')}</Badge>;
       case 'closed':
@@ -181,7 +180,7 @@ export default function SurveySection({
                     <h4 className="font-medium text-slate-800">{survey.title}</h4>
                     {getStatusBadge(survey.status)}
                     {survey.isAnonymous && (
-                      <Badge variant="secondary">{t('survey.anonymous', 'Анонимная')}</Badge>
+                      <Badge variant="default">{t('survey.anonymous', 'Анонимная')}</Badge>
                     )}
                   </div>
                   {survey.description && (

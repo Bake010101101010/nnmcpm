@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   Plus,
   Trash2,
   GripVertical,
   Settings,
-  Eye,
   Save,
   X,
   Copy,
@@ -59,7 +58,6 @@ export default function SurveyBuilder({
   );
   const [saving, setSaving] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [previewMode, setPreviewMode] = useState(false);
 
   const addQuestion = () => {
     const newQuestion: SurveyQuestion = {

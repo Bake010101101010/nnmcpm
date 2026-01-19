@@ -11,7 +11,7 @@ import {
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
-import { Plus, AlertCircle, Building2, AlertTriangle } from 'lucide-react';
+import { Plus, Building2, AlertTriangle } from 'lucide-react';
 import { useProjectStore, getProjectStage } from '../../store/projectStore';
 import { useUserRole } from '../../store/authStore';
 import { projectsApi } from '../../api/projects';

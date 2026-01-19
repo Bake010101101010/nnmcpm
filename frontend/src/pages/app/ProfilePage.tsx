@@ -9,7 +9,7 @@ import Input from '../../components/ui/Input';
 import Badge from '../../components/ui/Badge';
 
 export default function ProfilePage() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const { user, checkAuth } = useAuthStore();
   const { role, userDepartment } = useUserRole();
 

@@ -48,7 +48,7 @@ export default function ProjectFormModal({
     setError('');
 
     try {
-      const data = {
+      const data: Record<string, unknown> = {
         title: formData.title,
         description: formData.description,
         department: formData.department ? parseInt(formData.department) : undefined,
@@ -59,9 +59,9 @@ export default function ProjectFormModal({
       };
 
       if (project) {
-        await projectsApi.update(project.documentId, data);
+        await projectsApi.update(project.documentId, data as Partial<Project>);
       } else {
-        await projectsApi.create(data);
+        await projectsApi.create(data as Partial<Project>);
       }
 
       onSuccess();

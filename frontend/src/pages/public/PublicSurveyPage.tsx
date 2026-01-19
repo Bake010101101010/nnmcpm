@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   ClipboardList,
@@ -22,8 +22,7 @@ interface RespondentInfo {
 
 export default function PublicSurveyPage() {
   const { token } = useParams<{ token: string }>();
-  const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const startTimeRef = useRef<number>(Date.now());
 
   const [loading, setLoading] = useState(true);

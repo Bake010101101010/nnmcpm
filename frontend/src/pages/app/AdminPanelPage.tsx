@@ -4,7 +4,6 @@ import {
   Users,
   Plus,
   Search,
-  Filter,
   Shield,
   Building2,
   Edit,
@@ -28,7 +27,7 @@ import Modal from '../../components/ui/Modal';
 import Loader from '../../components/ui/Loader';
 
 export default function AdminPanelPage() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const { departments, fetchDepartments } = useProjectStore();
   
   const [users, setUsers] = useState<AdminUser[]>([]);
