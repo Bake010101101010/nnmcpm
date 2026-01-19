@@ -33,10 +33,9 @@ RUN adduser --system --uid 1001 strapi
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/config ./config
+COPY --from=builder /app/dist/config ./config
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/scripts ./scripts
-COPY --from=builder /app/src ./src
+COPY --from=builder /app/dist/src ./src
 
 # Create directories for data persistence
 RUN mkdir -p .tmp public/uploads
